@@ -1,20 +1,3 @@
-<!-- <% layout('layouts/Boilerplate') %> 
-    <h1>Edit campground</h1>
-    <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
-        <div>
-            <label for="title">Title</label>
-            <input type="text" name="campground[title]" placeholder="title" id="title" value = "<%=campground.title%>">
-        </div>
-        <div>
-            <label for="location">Location</label>
-            <input type="text" name="campground[location]" placeholder="location" id="location" value = "<%=campground.location%>">
-        </div>
-        <button>Update campground</button>
-    </form>
-     -->
-
-
-
     <% layout('layouts/Boilerplate') %> 
     <br>
     
@@ -24,29 +7,29 @@
             <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
                 <div>
                     <label for="title">Title</label>
-                    <input type="text" name="campground[title]" placeholder="title" id="title" value = "<%=campground.title%>">
+                    <input required type="text" name="campground[title]" placeholder="title" id="title" value = "<%=campground.title%>">
                 </div>
                 <div class="row">
                     <div class="col">
                         <div>
                             <label for="location">Location</label>
-                            <input type="text" name="campground[location]" placeholder="location" id="location" value = "<%=campground.location%>">
+                            <input required type="text" name="campground[location]" placeholder="location" id="location" value = "<%=campground.location%>">
                         </div>
                     </div>
                     <div class="col">
                         <div>
                             <label for="price">price</label>
-                            <input type="number" name="campground[price]" placeholder="0" id="price" value = "<%=campground.price%>">
+                            <input required type="number" name="campground[price]" placeholder="0" id="price" value = "<%=campground.price%>">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="image">Image URL</label>
-                    <input type="text" name="campground[image]" placeholder="image" id="image" value = "<%=campground.image%>">
+                    <input required type="text" name="campground[image]" placeholder="image" id="image" value = "<%=campground.image%>">
                 </div>
                 <div>
                     <label for="description">Description</label>
-                    <textarea type="text" name="campground[description]" placeholder="description" id="description" ><%=campground.description%></textarea>
+                    <textarea required type="text" name="campground[description]" placeholder="description" id="description" ><%=campground.description%></textarea>
                 </div>
                 <button class="btn aqua">Update campground</button>
             </form>
